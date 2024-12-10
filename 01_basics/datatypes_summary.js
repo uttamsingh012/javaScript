@@ -32,3 +32,32 @@ let myFunction = function() {
 
 
 console.log(typeof myFunction)
+
+
+
+
+
+
+//***************************Memory*************************/
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myname = "uttam"
+
+let anothername = myname
+anothername =  "saksham"
+
+console.log(myname);   // not change because in primitive datatype the copy of a variable is given to the second variable(anothername)
+console.log(anothername);  //
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl",
+}
+
+let usertwo = userOne
+
+usertwo.email = "uttam@google.com"
+
+console.log(userOne.email);  // user one email is also change because it give the reference of original email
+console.log(usertwo.email);
