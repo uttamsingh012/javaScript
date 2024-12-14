@@ -12,6 +12,7 @@
 } ) ("uttam");
 
 
+//  javascript execution context
 let val1 = 10
 let val2 = 5
 function sum(num1, num2){
