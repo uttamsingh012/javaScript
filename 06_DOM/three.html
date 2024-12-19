@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+<script>
+    // create div element
+    const div1 = document.createElement("div")
+    console.log(div1);
+    // adding property inside div element
+    div1.className = "main"
+    // div1.id = "myId"
+    div1.id = Math.round(Math.random() * 10 + 1)
+    div1.setAttribute("title", "generatedtitle")
+    div1.style.backgroundColor = "green"
+    div1.style.padding = "12px"
+    const addText = document.createTextNode("Lorem ipsum dolor sit.")
+    div1.appendChild(addText)
+    // console.log(addText);
+
+    document.body.appendChild(div1)
+</script>
+</html>
