@@ -82,7 +82,7 @@ form.addEventListener('submit', function (e) {
 ```
 
 
-## Project 3 Soloution Code
+## Project 3 Solution Code
 
 ```javascript
 // const clock = document.querySelector('#clock')
