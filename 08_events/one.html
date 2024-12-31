@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: grey; color: white;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px" id="photoshop" src="E:\JS WITH SH\event by hitesh\1719841524338.jpeg" alt="photoshop">
+            </li>
+            <li>
+                <img width="200px" id="jvirat" src="E:\JS WITH SH\event by hitesh\GRU8hNUWAAAnWQe.jpeg" alt="">
+            </li>
+            <li>
+                <img width="200px" id="rvirat" src="E:\JS WITH SH\event by hitesh\GRU8hPiXcAApsGl.jpeg" alt="">
+            </li>
+            <li>
+                <img width="200px" id="owvirat" src="E:\JS WITH SH\event by hitesh\GRZ8_OhbYAARoOz.jpeg" alt="">
+            </li>
+            <li>
+                <img width="200px" id="plvirat" src="E:\JS WITH SH\event by hitesh\Virat Kohli Wallpaper T20 World Cup 2022 Poster.jpeg" alt="">
+            </li>
+            <li>
+                <a style="color: aliceblue;" href="https://google.com" id="google">google</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("owvirat").onclick = function(){
+    //     alert("virat clicked")
+    // }
+    // or
+
+    // attachevent()
+    // jQuery - onevent listener
+
+    // type, timestamp, defaultPrevent
+    // target, toelement, srcelement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+    
+    document.getElementById("images").addEventListener('click', function(e){
+        // alert('virat')
+        console.log("click inside the ul")
+    },false)
+
+    document.getElementById("owvirat").addEventListener('click', function(e){
+        // alert('virat')
+        console.log("owvirat clicked")
+        // e.stopPropagation()
+    },false)
+
+    document.getElementById('google').addEventListener('click', function(e){
+        // e.preventDefault()
+        // e.stopPropagation()
+        console.log("google clicked")
+    }, false)
+
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName)
+        if (e.target.tagName === 'IMG') {
+            let removeit = e.target.parentNode
+            removeit.remove()
+        }
+        
+        // or 
+        // removeit.parentNode.removeChild(removeit)
+
+    }, false)
+</script>
+</html>
